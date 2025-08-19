@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f373ce3c-a4b9-4ece-b61e-bc5a380c0426" name="Changes" comment="Initial commit" />
+    <list default="true" id="f373ce3c-a4b9-4ece-b61e-bc5a380c0426" name="Changes" comment="Initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +90,7 @@
       <workItem from="1755535249096" duration="1344000" />
       <workItem from="1755576256064" duration="3514000" />
       <workItem from="1755586834947" duration="2135000" />
-      <workItem from="1755592753795" duration="6957000" />
+      <workItem from="1755592753795" duration="7271000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit for the first task from Future Intern">
       <option name="closed" value="true" />
