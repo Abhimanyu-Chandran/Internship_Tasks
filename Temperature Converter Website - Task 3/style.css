@@ -1,0 +1,45 @@
+html {
+    font-family: verdana, serif;
+    background-color: #abaaa5;
+    color: white;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin-top: 30px;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    border: 4px solid transparent;
+    background: linear-gradient(to right, #ea2a2a, #3d3dea) border-box;
+    border-image-slice: 1;
+}
+
+input[type="number"] {
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    width: 200px;
+}
+
+#result {
+    display: flex;
+    align-items: center;
+}
+
+.convert-button {
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 4px solid transparent;
+    background: linear-gradient(to left, #e15c5c, #6b6bde) border-box;
+    border-image-slice: 1;
+}

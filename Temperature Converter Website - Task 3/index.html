@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Converter</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<h1>Temperature Converter</h1>
+
+<div class="container">
+    <div class="temperature">
+        <label for="temp-input">Temperature :
+            <input id="temp-input" type="number"/>
+        </label>
+    </div>
+
+    <div class="radio-button">
+        <label for="celsius-button">
+            <input checked id="celsius-button" name="temp_unit" type="radio" value="C"/>
+            Celsius
+        </label>
+        <label for="fahrenheit-button">
+            <input id="fahrenheit-button" name="temp_unit" type="radio" value="F"/>
+            Fahrenheit
+        </label>
+    </div>
+
+    <div>
+        <button class="convert-button" onclick="temperatureChange();">Convert</button>
+    </div>
+
+    <p>Converted Temperature:</p>
+
+    <div>
+        <div id="result"></div>
+    </div>
+</div>
+
+<script>
+    function temperatureChange() {
+        const input = document.getElementById("temp-input").value;
+        const unit = document.querySelector('input[name="temp_unit"]:checked').value;
+        const result = document.getElementById("result");
+
+        let celsius, fahrenheit;
+
+        if (unit === 'C') {
+            celsius = input;
+            celsius = (input - 32) * 5 / 9;
+            result.innerHTML = `${celsius}`;
+        } else if (unit === 'F') {
+            fahrenheit = input;
+            fahrenheit = (input * 9 / 5) + 32;
+            result.innerHTML = `${fahrenheit}`;
+        }
+    }
+</script>
+</body>
+</html>

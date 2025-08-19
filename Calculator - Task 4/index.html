@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <label for="input-element" style="margin-top: 10px;">
+            <input id="input-element"/>
+        </label>
+        <div class="all-buttons">
+            <div class="inside-buttons" style="margin-top: 10px;">
+                <button class="cal-button" onclick="input();" value="/">/</button>
+                <button class="cal-button">CE</button>
+                <button class="cal-button">C</button>
+                <button class="cal-button">X</button>
+            </div>
+            <div class="inside-buttons">
+                <button class="cal-button">7</button>
+                <button class="cal-button">8</button>
+                <button class="cal-button">9</button>
+                <button class="cal-button">*</button>
+            </div>
+            <div class="inside-buttons">
+                <button class="cal-button">4</button>
+                <button class="cal-button">5</button>
+                <button class="cal-button">6</button>
+                <button class="cal-button">-</button>
+            </div>
+            <div class="inside-buttons">
+                <button class="cal-button">1</button>
+                <button class="cal-button">2</button>
+                <button class="cal-button">3</button>
+                <button class="cal-button">+</button>
+            </div>
+            <div class="inside-buttons" style="margin-bottom: 10px;">
+                <button class="cal-button">0</button>
+                <button class="cal-button">/</button>
+                <button class="cal-button">.</button>
+                <button class="cal-button" onclick="input();">=</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

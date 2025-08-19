@@ -1,0 +1,47 @@
+html {
+    font-family: Verdana, serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 500px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: grey;
+}
+
+.inside-buttons button {
+    font-size: 40px;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+    padding: 20px 30px 20px 30px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(to right, #88d588, #5858ce);
+}
+
+.inside-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+#input-element {
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    padding: 20px 95px 20px 95px;
+}
+
+.all-buttons {
+
+}

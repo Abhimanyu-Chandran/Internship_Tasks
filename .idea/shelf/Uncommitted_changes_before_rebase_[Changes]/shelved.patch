@@ -1,0 +1,141 @@
+Index: Temperature Converter Website - Task 3/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Temperature Converter Website - Task 3/style.css b/Temperature Converter Website - Task 3/style.css
+--- a/Temperature Converter Website - Task 3/style.css	(revision 117067961ec98eff946e10a95a6bfb85afd4fbe0)
++++ b/Temperature Converter Website - Task 3/style.css	(date 1755508502268)
+@@ -1,0 +1,10 @@
++html {
++    font-family: verdana, serif;
++    background-color: #7c7c7c;
++}
++
++h1 {
++    display: flex;
++    justify-content: center;
++}
++
+Index: Temperature Converter Website - Task 3/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Temperature Converter</title>\r\n</head>\r\n<body>\r\n<h1>Temperature Converter</h1>\r\n<label for=\"temp-input\">\r\n    <input id=\"temp-input\" placeholder=\"Enter the Temperature\" type=\"number\"/>\r\n</label>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Temperature Converter Website - Task 3/index.html b/Temperature Converter Website - Task 3/index.html
+--- a/Temperature Converter Website - Task 3/index.html	(revision 117067961ec98eff946e10a95a6bfb85afd4fbe0)
++++ b/Temperature Converter Website - Task 3/index.html	(date 1755514131076)
+@@ -3,11 +3,49 @@
+ <head>
+     <meta charset="UTF-8">
+     <title>Temperature Converter</title>
++    <link href="style.css" rel="stylesheet">
+ </head>
+ <body>
+ <h1>Temperature Converter</h1>
+-<label for="temp-input">
+-    <input id="temp-input" placeholder="Enter the Temperature" type="number"/>
+-</label>
++
++<div class="t">
++    <label for="temp-input">Temperature :
++        <input id="temp-input" type="number"/>
++    </label>
++</div>
++
++<div class="radio-button">
++    <input checked id="celsius-button" name="temp_unit" type="radio"/>
++    <label for="celsius-button">Celsius</label>
++    <input id="fahrenheit-button" name="temp_unit" type="radio"/>
++    <label for="fahrenheit-button">Fahrenheit</label>
++</div>
++
++<div class="convert-button">
++    <button onclick="temperatureChange();">Convert</button>
++</div>
++
++<div>
++    <p>Converted Temperature:</p>
++    <div class="result"></div>
++</div>
++
++<script>
++    function temperatureChange() {
++        const input_unit = document.getElementById("temp-input").value;
++        const unit = document.querySelector('input[name="temp_unit"]:checked').value;
++        const result = document.getElementById("result");
++        let celsius, fahrenheit;
++        if (unit === 'celsius') {
++            celsius = input_unit;
++            fahrenheit = (input_unit * 9 / 5) + 32;
++            console.log(celsius);
++        } else if (unit === 'fahrenheit') {
++            fahrenheit = input_unit;
++            celsius = (input_unit - 32) * 5 / 9;
++            console.log(fahrenheit);
++        }
++    }
++</script>
+ </body>
+ </html>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f373ce3c-a4b9-4ece-b61e-bc5a380c0426\" name=\"Changes\" comment=\"Initial commit for the first task from Future Intern\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Temperature Converter Website - Task 3/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Temperature Converter Website - Task 3/index.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n        <option value=\"CSS File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;Abhimanyu-Chandran&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/Abhimanyu-Chandran/Internship_Tasks.git&quot;,\r\n    &quot;accountId&quot;: &quot;a3a1a5af-296e-4e49-b559-6490edadf0fa&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 6\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"31RqWLDr42u95Cu0aEmdSNeEVUC\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,\r\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;local-branch&quot;,\r\n    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,\r\n    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,\r\n    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,\r\n    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.26927.40\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f373ce3c-a4b9-4ece-b61e-bc5a380c0426\" name=\"Changes\" comment=\"\" />\r\n      <created>1755497263319</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1755497263319</updated>\r\n      <workItem from=\"1755497266192\" duration=\"3854000\" />\r\n      <workItem from=\"1755502302897\" duration=\"153000\" />\r\n      <workItem from=\"1755506366633\" duration=\"1443000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Initial commit for the first task from Future Intern\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1755507392292</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1755507392293</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Initial commit for the first task from Future Intern\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1755507400817</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1755507400817</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"3\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"branch\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Initial commit for the first task from Future Intern\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Initial commit for the first task from Future Intern\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 117067961ec98eff946e10a95a6bfb85afd4fbe0)
++++ b/.idea/workspace.xml	(date 1755514745146)
+@@ -4,9 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="f373ce3c-a4b9-4ece-b61e-bc5a380c0426" name="Changes" comment="Initial commit for the first task from Future Intern">
++    <list default="true" id="f373ce3c-a4b9-4ece-b61e-bc5a380c0426" name="Changes" comment="Initial commit for the second task from Future Intern">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Temperature Converter Website - Task 3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature Converter Website - Task 3/index.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Temperature Converter Website - Task 3/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Temperature Converter Website - Task 3/style.css" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -83,7 +84,7 @@
+       <updated>1755497263319</updated>
+       <workItem from="1755497266192" duration="3854000" />
+       <workItem from="1755502302897" duration="153000" />
+-      <workItem from="1755506366633" duration="1443000" />
++      <workItem from="1755506366633" duration="7831000" />
+     </task>
+     <task id="LOCAL-00001" summary="Initial commit for the first task from Future Intern">
+       <option name="closed" value="true" />
+@@ -101,7 +102,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1755507400817</updated>
+     </task>
+-    <option name="localTasksCounter" value="3" />
++    <task id="LOCAL-00003" summary="Initial commit for the second task from Future Intern">
++      <option name="closed" value="true" />
++      <created>1755507833932</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1755507833932</updated>
++    </task>
++    <option name="localTasksCounter" value="4" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -132,6 +141,7 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Initial commit for the first task from Future Intern" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit for the first task from Future Intern" />
++    <MESSAGE value="Initial commit for the second task from Future Intern" />
++    <option name="LAST_COMMIT_MESSAGE" value="Initial commit for the second task from Future Intern" />
+   </component>
+ </project>
+\ No newline at end of file

@@ -1,0 +1,46 @@
+html {
+    font-family: Verdana, serif;
+}
+
+.header-content {
+    padding-left: 80px;
+    padding-right: 80px;
+    background-color: #2e3669;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.header-content img {
+    width: 80px;
+}
+
+
+.get-started-button {
+    margin: 30px 20px 30px 20px;
+    padding: 10px 25px 10px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    color: #19225b;
+    background-color: #ffb250;
+}
+
+.main-content {
+    background-color: #58bbff;
+    color: white;
+    margin-top: 10px;
+    padding: 160px;
+}
+
+.main-content button {
+    margin-top: 30px;
+    padding: 20px 100px 20px 100px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    color: #19225b;
+    background-color: #ffb250;
+}
