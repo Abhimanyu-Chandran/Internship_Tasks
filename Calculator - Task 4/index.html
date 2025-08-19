@@ -7,42 +7,25 @@
 </head>
 <body>
 <div class="container">
-    <div class="content">
-        <label for="input-element" style="margin-top: 10px;">
-            <input id="input-element"/>
-        </label>
-        <div class="all-buttons">
-            <div class="inside-buttons" style="margin-top: 10px;">
-                <button class="cal-button" onclick="input();" value="/">/</button>
-                <button class="cal-button">CE</button>
-                <button class="cal-button">C</button>
-                <button class="cal-button">X</button>
-            </div>
-            <div class="inside-buttons">
-                <button class="cal-button">7</button>
-                <button class="cal-button">8</button>
-                <button class="cal-button">9</button>
-                <button class="cal-button">*</button>
-            </div>
-            <div class="inside-buttons">
-                <button class="cal-button">4</button>
-                <button class="cal-button">5</button>
-                <button class="cal-button">6</button>
-                <button class="cal-button">-</button>
-            </div>
-            <div class="inside-buttons">
-                <button class="cal-button">1</button>
-                <button class="cal-button">2</button>
-                <button class="cal-button">3</button>
-                <button class="cal-button">+</button>
-            </div>
-            <div class="inside-buttons" style="margin-bottom: 10px;">
-                <button class="cal-button">0</button>
-                <button class="cal-button">/</button>
-                <button class="cal-button">.</button>
-                <button class="cal-button" onclick="input();">=</button>
-            </div>
-        </div>
+    <input id="input-element"/>
+    <div class="all-buttons">
+        <button class="operator" onclick="display('+');">+</button>
+        <button onclick="display('7');">7</button>
+        <button onclick="display('8');">8</button>
+        <button onclick="display('9');">9</button>
+        <button class="operator" onclick="display('-');">-</button>
+        <button onclick="display('4');">4</button>
+        <button onclick="display('5');">5</button>
+        <button onclick="display('6');">6</button>
+        <button class="operator" onclick="display('*');">*</button>
+        <button onclick="display('1');">1</button>
+        <button onclick="display('2');">2</button>
+        <button onclick="display('3');">3</button>
+        <button class="operator" onclick="display('/');">/</button>
+        <button onclick="display('0');">0</button>
+        <button onclick="display('.');">.</button>
+        <button onclick="calculate();">=</button>
+        <button class="operator" onclick="clearDisplay();">C</button>
     </div>
 </div>
 <script src="script.js"></script>

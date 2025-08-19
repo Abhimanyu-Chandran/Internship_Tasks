@@ -1,11 +1,17 @@
-function input() {
-    let result;
-    let input = document.getElementById('input-element').value;
-    let button = document.querySelector('.cal-button');
-    console.log(input);
+let input = document.getElementById('input-element');
 
-    if (button.value === '/') {
-        result = input % button;
-        console.log(result);
+function display(input_element) {
+    input.value += input_element;
+}
+
+function clearDisplay() {
+    input.value = "";
+}
+
+function calculate() {
+    try {
+        input.value = eval(input.value);
+    } catch (error) {
+        input.value = "Error";
     }
 }
